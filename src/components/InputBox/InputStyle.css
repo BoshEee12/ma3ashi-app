@@ -1,0 +1,16 @@
+.input-container {
+    margin: 5px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.input-container .label{
+    margin: 7px;
+    font-weight: bold;
+}
+.input-container .input {
+    padding: 8px;
+    border-radius: 5px;
+    background: #fdfbff;
+    margin-left: 15px;
+}

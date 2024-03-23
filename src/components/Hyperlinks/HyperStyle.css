@@ -1,0 +1,13 @@
+.hyperlink {
+    text-decoration: none;
+    color: #347fd4;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 2px;
+}
+.hyperlink:hover {
+    color: #106cd4;
+    text-decoration: underline;
+}
