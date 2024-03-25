@@ -1,0 +1,52 @@
+.home-container {
+    padding: 0;
+    margin: 0; 
+    background-image: url('/public/herobg.jpg');
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+   
+}
+
+.text-sec {
+    width: 40%;
+    padding: 30px;
+    color: #fff;
+    font-size: 26px;
+    margin: 30px;
+    display: flex;
+    justify-self: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.hdr-text {
+    margin: 30px;
+}
+.start-btn {
+    background-color: rgb(116, 92, 148);
+    padding: 10px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+.start-btn:hover {
+    background-color: rgb(105, 69, 151);
+    border-radius: 12px;
+}
+.bottom-text {
+    font-size: 22px;
+}
