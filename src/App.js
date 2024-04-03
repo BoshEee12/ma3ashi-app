@@ -14,6 +14,7 @@ import Navbar from "./components/Navbar/Navbar";
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
 
+
   const signUserOut = () => {
     signOut(auth).then(() => {
       localStorage.clear();
@@ -41,7 +42,7 @@ function App() {
           <Route
             
             path='/dashboard'
-            element={<Dashboard isAuth={isAuth} />}
+            element={<Dashboard />}
           />
           <Route
             

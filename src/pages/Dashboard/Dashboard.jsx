@@ -4,7 +4,7 @@ import './DashStyle.css'
 const Dashboard = () => {
     return (
         <div className='dash-container'>Dashboard
-            <NewEntry />
+            Dashboard
         </div>
     )
 }

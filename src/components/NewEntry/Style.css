@@ -1,4 +1,63 @@
 .entry-container {
+padding: 50px 20px;
+margin-top: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: min-content;
+
+}
+.entry-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.day-data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.forms-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 6rem;
+
+}
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.textar {
     width: 100%;
-    background-color: red;
+    height: 100px;
+}
+
+.btn {
+    background-color: #7950de;
+    color: #fff;
+    border: none;
+    padding: 10px 50px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: #8d6cdf;
+    border-radius: 10px;
 }
