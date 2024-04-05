@@ -24,7 +24,7 @@ const SignIn = ({ setIsAuth }) => {
         e.preventDefault();
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            localStorage.setItem("isAuth", true);
+            localStorage.setItem("isAuth", email);
             setIsAuth(true)
             navigate("/dashboard")
         } catch (error) {

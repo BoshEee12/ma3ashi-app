@@ -24,9 +24,10 @@ const NewEntry = () => {
         try {
             console.log("Creating entry...");
             await addDoc(workingDataCollection, {
-                workPlace, hoursWorked, bounses, gazFee, workers, notes, today, todayDate, author: { email: auth.currentUser.email, id: auth.currentUser.uid }
+                workPlace, hoursWorked,hourRate,bounsRate, bounses, gazFee, workers, notes, today, todayDate, author: { email: auth.currentUser.email, id: auth.currentUser.uid }
             });
             console.log("Entry created successfully!");
+            window.location.href = '/dashboard'
         } catch (error) {
             console.error("Error creating entry:", error);
         }
@@ -36,10 +37,12 @@ const NewEntry = () => {
     return (
         <div className='entry-container'>
             <div className='entry-wrapper'>
-                <div className='day-data'>
-                    <span>{new Date().toLocaleDateString()}</span>
-                    <span>{new Date().toLocaleDateString('en-US', { weekday: 'long' })}</span>
-                </div>
+                
+                <section className='section'>
+                    <p>{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</p>
+                    <p>{new Date().toLocaleDateString('en-US', { weekday: 'long' })}</p>
+                </section>
+             
                 <div className='forms-wrapper'>
                     <div className='left-form'>
                         <InputBox label='Date' inType={'text'} inPlaceHolder={'dd/mm'} inValue={todayDate} inFun={(e) => setTodayDate(e.target.value)} />

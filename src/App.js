@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { auth } from "./firebase/firebase";
-import { signOut } from "firebase/auth";
 
 import SignUp from "./pages/signup/SignUp";
 import Dashboard from "./pages/Dashboard/Dashboard";
@@ -15,18 +13,12 @@ function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
 
 
-  const signUserOut = () => {
-    signOut(auth).then(() => {
-      localStorage.clear();
-      setIsAuth(false);
-      window.location.pathname = "/signin";
-    });
-  };
+ 
 
   return (
     <div className='page'>
       <Router>
-        <Navbar isAuth={isAuth} />
+        <Navbar isAuth={isAuth} setIsAuth={setIsAuth} />
         <Routes>
           <Route exact path='/' element={<Home isAuth={isAuth} />} />
           <Route
